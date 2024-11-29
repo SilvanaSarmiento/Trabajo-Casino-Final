@@ -3,7 +3,7 @@ import { Juego } from "./Juego";
 class TragamonedasClasico extends Juego{
 
   constructor (){
-    super(2, "tragamonedas Clasico");
+    super("tragamonedas Clasico", 2);
     
   }
 
