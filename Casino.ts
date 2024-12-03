@@ -2,8 +2,8 @@ import {Juego} from "./Juego"
 export class Casino {
     protected saldo: number;
     protected juegos: Juego[];
-    constructor(saldo:number, juegos:Juego []){
-        this.saldo=saldo;
+    constructor( juegos:Juego []){
+        
         this.juegos=[];
     }
     //metodos
