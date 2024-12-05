@@ -34,14 +34,13 @@ export class Dados extends Juego {
         return resultadoDados;
         }
     
-    sumarResultadoDados(resultadoDados:number []):number {
+    sumarResultadoDados(resultadoDados: number[]): number {
         let sumaDados: number = 0;
         for (let i = 0; i < resultadoDados.length; i++) {
-            sumaDados+= resultadoDados[i];
-        return sumaDados;
+            sumaDados += resultadoDados[i];
 
+        } return sumaDados;
     }
-}
 
 
     // metodos abstractos
