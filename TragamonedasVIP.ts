@@ -7,7 +7,7 @@ class TragamonedasVIP extends Tragamonedas {
   private apuestaMinimaEspecial: number;
 
 
-  constructor(nombreDelJuego: string, apuestaMinima: number) {
+  constructor() {
     super(); 
     this.apuestaMinimaEspecial = 50; 
   }
@@ -46,11 +46,10 @@ class TragamonedasVIP extends Tragamonedas {
   public getApuestaMinimaEspecial(): number {
     return this.apuestaMinimaEspecial;
   }
-}
 
-// Control del juego para el modo VIP
-function iniciarJuegoTragamonedasVIP(): void {
-  const tragamonedasEspecial = new TragamonedasVIP("Tragamonedas VIP", 50);
+
+ iniciarJuegoTragamonedasVIP(): void {
+  const tragamonedasEspecial = new TragamonedasVIP();
   console.log("Bienvenido al Juego de Tragamonedas VIP! 🎰");
 
   // Configuración inicial del saldo
@@ -98,5 +97,4 @@ function iniciarJuegoTragamonedasVIP(): void {
   console.log(`👋 ¡Gracias por jugar! Tu saldo final es $${saldo.toFixed(2)}.`);
 }
 
-// Ejecutar el juego especial
-iniciarJuegoTragamonedasVIP();
+}

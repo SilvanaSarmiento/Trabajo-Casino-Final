@@ -1,10 +1,12 @@
 import * as readlineSync from "readline-sync";
 import {Juego} from "./Juego"
+
 export class Tragamonedas extends Juego{
   protected figuras : string[] = ["🍋", "🍇", "🍊", "🍓"];
   protected rodillos: string[] = [];
   protected cantidadRodillos: number;
   protected saldo: number;
+  
   constructor (){
     super("Tragamonedas Clasico", 20)
      this.cantidadRodillos = 3;
@@ -23,7 +25,7 @@ export class Tragamonedas extends Juego{
   //Inicia los rodillos llenando el array con figuras aleatorias
   private IniciarRodillos(): void {
     this.rodillos = Array(this.cantidadRodillos).fill("").map(() => this.getFiguraRandom());
-    console.log("Rodillos inicializados:", this.rodillos); // Verifica el contenido de los rodillos
+   
 }
   //figura aleatoria
   private getFiguraRandom(): string {
@@ -44,7 +46,7 @@ export class Tragamonedas extends Juego{
   }
   public calcularResultado(): string {
     if (this.esGanador()) {
-      return `Felicidades, ¡ganaste! :gorro_de_fiesta: Las figuras fueron: [${this.rodillos.join(" | ")}]`;
+      return `Felicidades, ¡ganaste! 🎉 Las figuras fueron: [${this.rodillos.join(" | ")}]`;
     } else {
       return `Lo siento, perdiste. Las figuras fueron: [${this.rodillos.join(" | ")}]`;
     }
@@ -59,21 +61,20 @@ export class Tragamonedas extends Juego{
     this.girarRodillos();
     this.MostrarRodillos();
     if (this.esGanador()) {
-      console.log("Felicidades, ganaste! :gorro_de_fiesta:");
+      console.log("Felicidades, ganaste! 🎉");
       return apuesta * 2;
     }else {
-      console.log("Perdiste la jugada :decepcionado:");
+      console.log("Perdiste la jugada 😞");
       return -apuesta;
     }
   }
   return 0; //si la apuesta fue inválida, no se realiza la apuesta
 }
-}
 
-//Control del juego
-function iniciarJuegoTragamonedas(): void {
+iniciarJuegoTragamonedas(): void {
   const tragamonedas = new Tragamonedas();
   console.log("Bienvenido al Juego de Tragamonedas! 🎰");
+  
   //configuración inicial del saldo
    let saldo:number = readlineSync.questionInt("Ingresa tu saldo inicial: ");
   while (isNaN(saldo) || saldo <= 0 ){
@@ -111,5 +112,5 @@ while (seguirJugando) {
 }
 console.log(`😊 ¡Gracias por jugar! Tu saldo final es $${saldo.toFixed(2)}.`);
 }
-// Ejecuta el juego
-iniciarJuegoTragamonedas();
+
+}
