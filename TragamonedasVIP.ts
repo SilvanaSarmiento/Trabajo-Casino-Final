@@ -1,4 +1,4 @@
-import * as readlineSync from "readline-Sync"
+import * as readlineSync from "readline-sync"
 import { Tragamonedas } from "./Tragamonedas";
 
 
@@ -7,7 +7,7 @@ class TragamonedasVIP extends Tragamonedas {
   private apuestaMinimaEspecial: number;
 
 
-  constructor() {
+  constructor(nombreDelJuego: string, apuestaMinima: number) {
     super(); 
     this.apuestaMinimaEspecial = 50; 
   }
@@ -50,7 +50,7 @@ class TragamonedasVIP extends Tragamonedas {
 
 // Control del juego para el modo VIP
 function iniciarJuegoTragamonedasVIP(): void {
-  const tragamonedasEspecial = new TragamonedasVIP();
+  const tragamonedasEspecial = new TragamonedasVIP("Tragamonedas VIP", 50);
   console.log("Bienvenido al Juego de Tragamonedas VIP! 🎰");
 
   // Configuración inicial del saldo
@@ -60,8 +60,8 @@ function iniciarJuegoTragamonedasVIP(): void {
     saldo = parseFloat(readlineSync.question("Ingresa tu saldo inicial: "));
   }
 
-  console.log(`Presione cualquier tecla para comenzar el juego`);
-  readlineSync.keyInPause();
+  readlineSync.question('Presiona Enter para continuar...');
+  
 
   let seguirJugando = true;
 
