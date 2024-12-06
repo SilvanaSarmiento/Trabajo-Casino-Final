@@ -69,7 +69,7 @@ export class Dados extends Juego {
             if (isNaN(apuesta)) {
                 console.log(`La apuesta debe ser un número.`);
             } else if (apuesta < this.apuestaMinima) {
-                console.log(`La apuesta mínima es ${this.apuestaMinima}`);
+                console.log(`¡Error! la apuesta mínima es ${this.apuestaMinima}`);
             } else if (apuesta > this.saldo) {
                 console.log(`La apuesta no puede exceder el saldo actual`);
             } else {
@@ -91,7 +91,7 @@ export class Dados extends Juego {
         this.ingresarSaldo();
         if (this.saldo < this.apuestaMinima) {
             console.log(`¡Error! el saldo mínimo es ${this.apuestaMinima}`);
-            return "El saldo mínimo es " + this.apuestaMinima;
+            return "¡Error! el saldo mínimo es " + this.apuestaMinima;
         }
     }
 
@@ -112,3 +112,4 @@ export class Dados extends Juego {
         return this.saldo;
     }
 }
+
