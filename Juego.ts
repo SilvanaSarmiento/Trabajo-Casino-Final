@@ -11,5 +11,5 @@ export abstract class Juego implements Apuesta{
     }
 
     abstract realizarApuesta(valor: number): boolean;
-    abstract calcularResultado(): string;
+    abstract calcularResultado();
  }
