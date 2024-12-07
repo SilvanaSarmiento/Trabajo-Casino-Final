@@ -226,6 +226,3 @@ export class Dados extends Juego {
         return this.saldo;
     }
 }
-let juegoDados = new Dados("Dados", 100, 2);
-juegoDados.iniciarDados();
-juegoDados.jugar(100);
