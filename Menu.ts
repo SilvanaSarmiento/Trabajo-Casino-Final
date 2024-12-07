@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 
 import { Juego } from './Juego'; // Clase base
 import { Casino } from './Casino'; // Clase Casino
-import { Tragamonedas } from './TragamonedasClasico';
+import { Tragamonedas } from './Tragamonedas';
 import { TragamonedasVIP } from './TragamonedasVIP';
 import { Ruleta } from './Ruleta';
 import { Dados } from './Dados';
@@ -79,7 +79,7 @@ function iniciar() {
                     console.log(`
           Instrucciones del Juego de Dados 🎲:
           💎 Elige una cantidad para apostar.
-          💎 Se lanzan uno o dos dados.
+          💎 Elige con cuantos dados quieres jugar.
           💎 Si la suma de los dados es un número par, ¡ganas el doble de lo apostado!
           💎 Si la suma de los dados es impar, pierdes la apuesta.
           `);
